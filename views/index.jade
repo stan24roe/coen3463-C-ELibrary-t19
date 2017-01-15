@@ -1,0 +1,32 @@
+extends layout
+
+block content
+	.jumbotron
+		.container
+			h1 Presents
+			i
+				p "Top 25 FIlipino Recipe"
+		.container
+			.picsx
+				img(src='../images/logo1.jpg' height = '200px' width = '200px')
+
+	.container
+		.row
+			.col-md-4
+				h1 New Recipe
+				form(method="POST", action="/foods")
+				p
+				input(type="text", placeholder="Recipe Name", name="name")
+				p
+				input(type="text", placeholder="Youtube Link", name="Youtube")
+				p
+				Textarea(placeholder="Ingredients", name="Ingredients")
+				p
+				Textarea(placeholder="Description", name="Description")
+				p
+				input(type="text", placeholder="Date of Entry", name="Date")
+				br
+				br
+				button(type="submit") Submit
+
+			.col-md-4

@@ -1,0 +1,10 @@
+extends layout
+
+block content
+
+ .container
+   h2 Recipe Lists
+   ul
+     for food in foods
+       li
+         a(href='/food/' + food._id ) #{food.name} 
