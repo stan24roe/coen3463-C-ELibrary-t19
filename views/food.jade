@@ -8,3 +8,7 @@ block content
    p Recipe Description: #{food.Description}
    p Recipe Youtube Link: #{food.Youtube}
    p Recipe Creation Date: #{food.Date}
+   p Recipe Update Date: #{food.Update_Date}
+   a(href='/food/' + food._id+ '/update') Update
+   br
+   a(href='/food/' + food._id+'/delete') delete

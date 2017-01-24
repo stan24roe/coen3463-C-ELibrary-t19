@@ -75,9 +75,51 @@ MongoClient.connect(mdburl, function(err, database) {
             res.render('food', {
                 food: food
             });
+        })
+    });
+
+    app.get('/food/:foodId/update', function(req, res) { 
+        var foodId = req.params.foodId;
+        var foodCollection = db.collection('foods');
+        foodCollection.findOne({ _id: new ObjectId(foodId) }, function(err, food) {
+            res.render('update', {
+                update: food
+            });
         });
     });
 
+ app.post('/food/:foodId/update', function(req, res) {
+        var foodId = req.params.foodId;
+        var foodCollection = db.collection('foods');
+        var save={
+            name: req.body.name,
+            Description: req.body.Description,
+            Ingredients: req.body.Ingredients,
+            Update_Date: req.body.Date1
+        };
+        foodCollection.updateOne({ _id: new ObjectId(foodId)},{$set: save}, function(err, food) {
+            if(err){
+            return console.log(err)
+            }
+            console.log("Updating Data Successful!");
+            res.redirect('/food/'+foodId)
+        });
+    });
+
+    app.get('/food/:foodId/delete', function(req, res) {
+        var foodId = req.params.foodId;
+        var foodCollection = db.collection('foods');
+        foodCollection.deleteOne({ _id: new ObjectId(foodId)}, function(err, food) {
+            if(err){
+            return console.log(err)
+            }
+            console.log("Deleting Data Successful!");
+            res.redirect('/foods/')
+            
+        });
+    });
+
+  
     // catch 404 and forward to error handler
     app.use(function(req, res, next) {
       var err = new Error('Not Found');
@@ -96,9 +138,4 @@ MongoClient.connect(mdburl, function(err, database) {
       res.render('error');
     });
 });
-
-
-
-
-
 module.exports = app;

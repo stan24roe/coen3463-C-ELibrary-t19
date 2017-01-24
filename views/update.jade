@@ -1,0 +1,19 @@
+extends layout
+
+block content
+	.container
+		h1 New Recipe
+			form(method="POST", action="/food/#{update._id}/update")
+				p
+				input(type="text", placeholder="Recipe Name", name="name" value="#{update.name}")
+				p
+				input(type="text", placeholder="Youtube Link", name="Youtube" value="#{update.Youtube}")
+				p
+				Textarea(placeholder="Ingredients", name="Ingredients" value="#{update.Ingredients}")
+				p
+				Textarea(placeholder="Description", name="Description" value="#{update.Description}")
+				p
+				input(type="text", placeholder="Date of update", name="Date1" value="#{update.Date}")
+				br
+				br
+				button(type="submit") Submit
