@@ -1,31 +1,59 @@
 doctype html
 html
   head
-    title #{title} Eat My Blog
+    title #{title} C&E Library
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-     nav.navbar.navbar-inverse.navbar-fixed-top
-      .container
-        .navbar-header
-          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
-            span.sr-only Toggle navigation
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          a.navbar-brand(href='#') Eat My Blog
-        #navbar.collapse.navbar-collapse
-          ul.nav.navbar-nav
-            li.active
-              a(href='/') Home
-            li.active
-              a(href='/foods') View Recipes
+    link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+    link(rel='stylesheet', href='/stylesheets/w3-theme-black.css')
+    link(rel='stylesheet', href='/stylesheets/w31.css')
+body
+    .w3-top
+      ul.w3-navbar.w3-theme-d2.w3-left-align
+        li.w3-hide-medium.w3-hide-large.w3-opennav.w3-right
+          a.w3-hover-white.w3-theme-d2(href='javascript:void(0);', onclick='openNav()')
+            i.fa.fa-bars
+        |   
+        li
+          a.w3-teal(class="nav-item",href='/')  Home
+         |   
+        li.w3-hide-small
+          a.w3-hover-white(class="nav-item",href='/#about') About
+
+        li.w3-hide-small.w3-dropdown-hover
+          a(href='javascript:void(0);', title='library')
+            | Library
+          |      
+          |     
+          .w3-dropdown-content.w3-white.w3-card-4
+            a(class="nav-item",href='/#resistor') Resistors
+            |       
+            a(class="nav-item",href='/#relays') Relays
+            |       
+            a(class="nav-item",href='/#diodes') Diodes
+            |       
+            a(class="nav-item",href='/#transistors') Transistors
+            |       
+            a(class="nav-item",href='/#others') Others
+        |   
+        li.w3-hide-small
+          a.w3-hover-white(class="nav-item",href='/forums') Forums
+
+.w3-display-container.w3-animate-opacity
+      img(src='images/engine.jpg', alt='boat', style='width:100%;min-height:250px;max-height:250px;')
+      br
+      br
+      br
+      br
+      .w3-display-left.w3-padding-xlarge.w3-text-white
+       span.w3-xxxlarge Circuit and Electronics Library
+        span.w3-large Basic and Advanced Materials
+         
+     
     block content
     footer
         p &copy; 2017, All Rights Reserved
 
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
-    script(src='/javascripts/bootstrap.js')
+   // script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+    //script(src='/javascripts/bootstrap.js')

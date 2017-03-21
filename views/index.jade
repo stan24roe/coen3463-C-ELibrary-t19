@@ -2,31 +2,162 @@ extends layout
 
 block content
 	.jumbotron
-		.container
-			h1 Presents
-			i
-				p "Top 25 FIlipino Recipe"
-		.container
-			.picsx
-				img(src='../images/logo1.jpg' height = '200px' width = '200px')
-
-	.container
-		.row
-			.col-md-4
-				h1 New Recipe
-				form(method="POST", action="/foods")
-					p
-					input(type="text", placeholder="Recipe Name", name="name")
-					p
-					input(type="text", placeholder="Youtube Link", name="Youtube")
-					p
-					Textarea(placeholder="Ingredients", name="Ingredients")
-					p
-					Textarea(placeholder="Description", name="Description")
-					p
-					input(type="text", placeholder="Date of Entry", name="Date")
-					br
-					br
-					button(type="submit") Submit
-
 	
+	#about.container.w3-center
+			
+			br
+			br
+			h1 The C&E Library
+				i
+				p "Is a Website that will show a list of electronics and circuit materials, could help a student in looking for a materials to be needed. This site can range into basic to some advanced materials used in school practical examination in electronics and circuit subjects."
+				br
+
+	#resistors.w3-container
+		h1.w3-center Resistors
+		i
+			p.w3-center The property of a substance which opposes the flow of electric current (or electricity) through it is called Resistance OR Resistance is the ability of a circuit which opposes current.
+		.w3-row-padding.w3-center(style='margin-top:64px')
+		.w3-half
+			img(src='../images/linear.jpg' style='height: 200px; width: 200px')
+			p.w3-large Linear Resistor
+			p
+				| Those resistors, which values change with the applied voltage and temperature, are called linear resistors. In other words, a resistor, which current value is directly proportional to the applied voltage is known as linear resistors.. 
+		.w3-half
+			img(src='../images/non-linear.jpg' style='height: 200px; width: 200px')
+			p.w3-large Non-Linear Resistor
+			p
+				| Nonlinear resistors are those resistors, where the current flowing through it does not change according to Ohm’s Law but, changes with change in temperature or applied voltage.
+				In addition, if the flowing current through a resistor changes with change in body temperature, then these kinds of resistors are called Thermisters. If the flowing current through a resistor change with the applied voltages, then it is called a Varistors or VDR (Voltage Dependent Resistors).
+		.w3-center
+			p
+			a.w3-btn.w3-black.w3-padding-large.w3-large.w3-margin-top.w3-opacity.w3-hover-opacity-off(href='/resistor') See the List
+			br
+			br
+
+	#relays.w3-container
+		h1.w3-center Relays
+		i
+			p.w3-center Relays are the primary protection as well as switching devices in most of the control processes or equipments. All the relays respond to one or more electrical quantities like voltage or current such that they open or close the contacts or circuits. A relay is a switching device as it works to isolate or change the state of an electric circuit from one state to another.
+
+		.w3-row-padding.w3-center(style='margin-top:64px')
+		.w3-quarter
+			img(src='../images/elecmag.jpg' style='height: 200px; width: 200px')
+			p.w3-large Electromagnetics Relays
+			p
+				| These relays are constructed with electrical, mechanical and magnetic components, and have operating coil and mechanical contacts. Therefore, when the coil gets activated by a  supply system, these mechanical contacts gets opened or closed. The type of supply can be AC or DC.
+		.w3-quarter
+			img(src='../images/ssr.jpg' style='height: 200px; width: 200px')
+			p.w3-large Solid State Relays
+			p
+				| Solid State uses solid state components to perform the switching operation without moving any parts. Since the control energy required is much lower compared with the output power to be controlled by this relay that results the power gain higher when compared to the electromagnetic relays. These are of different types: reed relay coupled SSR, transformer coupled SSR, photo-coupled SSR, and so on.
+		.w3-quarter
+			img(src='../images/hybrid.jpg' style='height: 200px; width: 200px')
+			p.w3-large Hybrid Relays
+			p
+				| These relays are composed of electromagnetic relays and electronic components. Usually, the input part contains the electronic circuitry that performs rectification and the other control functions, and the output part include electromagnetic relay.
+		.w3-quarter
+			img(src='../images/thermal.jpg' style='height: 200px; width: 200px')
+			p.w3-large Thermal Relays
+			p
+				| These relays are based on the effects of heat, which means – the rise in the ambient temperature from the limit, directs the contacts to switch from one position to other. These are mainly used in motor protection and consist of bimetallic elements like temperature sensors as well as control elements. Thermal overload relays are the best examples of these relays.
+		.w3-center
+			p
+			a.w3-btn.w3-black.w3-padding-large.w3-large.w3-margin-top.w3-opacity.w3-hover-opacity-off(href='/relays') See the List
+			br
+			br
+
+	#diodes.w3-container
+		h1.w3-center Diodes
+		i
+			p.w3-center Diodes are electronic components functions as a one-way valve it means it allow current to flow in one direction. These diodes are manufactured by the semiconductor materials germanium, silicon and selenium. Operation of diode can be classified in two ways, if it allows the current then it is forward biased otherwise it is reverse biased.
+
+		.w3-row-padding.w3-center(style='margin-top:64px')
+		.w3-quarter
+			img(src='../images/led.jpg' style='height: 200px; width: 200px')
+			p.w3-large Light Emitting Diode
+			p
+				| It is one of the most popular type of diodes and when this diode permits the transfer of electric current between the electrodes, light is produced. In most of the diodes, the light (infrared) cannot be seen as they are at frequencies that do not permit visibility. When the diode is switched on or forward biased, the electrons recombine with the holes and release energy in the form of light. The color of light depends on the energy gap of the semiconductor.
+		.w3-quarter
+			img(src='../images/Zdiode.jpg' style='height: 200px; width: 200px')
+			p.w3-large Zener diode
+			p
+				| This type of diode provides a stable reference voltage, thus is a very useful type and is used in vast quantities. The diode runs in reverse bias, and breaks down on the arrival of a certain voltage. A stable voltage is produced, if the current through the resistor is limited. In power supplies, these diodes are widely used to provide a reference voltage.
+		.w3-quarter
+			img(src='../images/photo.jpg' style='height: 200px; width: 200px')
+			p.w3-large Photodiode
+			p
+				| These relays are composed of electromagnetic relays and electronic components. Usually, the input part contains the electronic circuitry that performs rectification and the other control functions, and the output part include electromagnetic relay.
+		.w3-quarter
+			img(src='../images/rectifier.jpg' style='height: 200px; width: 200px')
+			p.w3-large Rectifier Diode
+			p
+				| These relays are based on the effects of heat, which means – the rise in the ambient temperature from the limit, directs the contacts to switch from one position to other. These are mainly used in motor protection and consist of bimetallic elements like temperature sensors as well as control elements. Thermal overload relays are the best examples of these relays.
+				br
+				br
+		.w3-center
+			p
+			a.w3-btn.w3-black.w3-padding-large.w3-large.w3-margin-top.w3-opacity.w3-hover-opacity-off(href='/diodes') See the List
+			br
+			br
+	#transistors.w3-container
+		h1.w3-center Transistors
+		i
+			p.w3-center Transistor is a semiconductor device which is used to amplify the signals as well as in switching circuits. Generally transistor is made of solid material which contains three terminals such as emitter (E), Base (B) and Collector (C) for connections with other components in the circuit. Some transistors contains fourth terminal also i.e. substrate (S). Transistor is one of the active components. From the time of first transistor invention to present days the transistors are classified into different types depending on either construction or operation, they are explained using tree diagram as below.
+
+		.w3-row-padding.w3-center(style='margin-top:64px')
+		.w3-quarter
+			img(src='../images/junction.jpeg' style='height: 200px; width: 200px')
+			p.w3-large Junction Transistors
+			p
+				| Junction transistor is generally called as Bipolar Junction Transistor (BJT). The BJT transistors have three terminals named emitter (E), Base (B), Collector (C). The name itself indicates that it has two junctions between p-type and n-type semiconductors. The BJT transistors are classified in to NPN and PNP transistors depending on the construction.
+		.w3-quarter
+			img(src='../images/npn.jpeg' style='height: 200px; width: 200px')
+			p.w3-large NPN Transistor
+			p
+				| NPN is one of the two types of Bipolar Junction Transistors (BJT). The NPN transistor consists of two n-type semiconductor materials and they are separated by a thin layer of p-type semiconductor. Here the majority charge carriers are electrons and holes are the minority charge carriers. The flowing of electrons from emitter to collector forms the current flow in the transistor through the base terminal.
+		.w3-quarter
+			img(src='../images/pnp.jpg' style='height: 200px; width: 200px')
+			p.w3-large PNP Transistor
+			p
+				| The PNP is another type of Bipolar Junction Transistors (BJT). The PNP transistors contain two p-type semiconductor materials and are separated by a thin layer of n-type semiconductor. The majority charge carriers in the PNP transistors are holes and electrons are minority charge carriers. The arrow in the emitter terminal of transistor indicates the flow of conventional current. In PNP transistor the current flows from Emitter to Collector.
+		.w3-quarter
+			img(src='../images/mosfet.jpg' style='height: 200px; width: 200px')
+			p.w3-large MOSFET
+			p
+				| Metal-Oxide-Semiconductor Field Effect Transistor (MOSFET) is most useful type of among all transistors. The name itself indicates that it contains metal gate terminal. The MOSFET has four terminals drain, source, gate and body or substrate (B). MOSFET has many advantages over BJT and JFET, mainly it offer high input impedance and low output impedance. It is used in low power circuits mainly in chip designing technologies.
+				br
+				br
+		.w3-center
+			p
+			a.w3-btn.w3-black.w3-padding-large.w3-large.w3-margin-top.w3-opacity.w3-hover-opacity-off(href='/diodes') See the List
+			br
+			br
+		#others.w3-container
+		h1.w3-center Others
+		
+		.w3-row-padding.w3-center(style='margin-top:64px')
+		.w3-quarter
+			img(src='../images/switch.jpg' style='height: 200px; width: 200px')
+			p.w3-large Switches
+			p
+				| Junction transistor is generally called as Bipolar Junction Transistor (BJT). The BJT transistors have three terminals named emitter (E), Base (B), Collector (C). The name itself indicates that it has two junctions between p-type and n-type semiconductors. The BJT transistors are classified in to NPN and PNP transistors depending on the construction.
+		.w3-quarter
+			img(src='../images/ps.jpg' style='height: 200px; width: 200px')
+			p.w3-large Power Supply
+			p
+				| NPN is one of the two types of Bipolar Junction Transistors (BJT). The NPN transistor consists of two n-type semiconductor materials and they are separated by a thin layer of p-type semiconductor. Here the majority charge carriers are electrons and holes are the minority charge carriers. The flowing of electrons from emitter to collector forms the current flow in the transistor through the base terminal.
+		.w3-quarter
+			img(src='../images/wires.jpg' style='height: 200px; width: 200px')
+			p.w3-large Wires
+			p
+				| The PNP is another type of Bipolar Junction Transistors (BJT). The PNP transistors contain two p-type semiconductor materials and are separated by a thin layer of n-type semiconductor. The majority charge carriers in the PNP transistors are holes and electrons are minority charge carriers. The arrow in the emitter terminal of transistor indicates the flow of conventional current. In PNP transistor the current flows from Emitter to Collector.
+		.w3-quarter
+			img(src='../images/mosfet.jpg' style='height: 200px; width: 200px')
+			p.w3-large Others
+			p
+				| 
+				br
+				br
+		.w3-center
+			p
+			a.w3-btn.w3-black.w3-padding-large.w3-large.w3-margin-top.w3-opacity.w3-hover-opacity-off(href='/diodes') See the List

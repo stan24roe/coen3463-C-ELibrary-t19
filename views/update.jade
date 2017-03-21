@@ -3,17 +3,16 @@ extends layout
 block content
 	.container
 		h1 New Recipe
-			form(method="POST", action="/food/#{update._id}/update")
+			form(method="POST", action="/rawr/#{update._id}/update")
 				p
-				input(type="text", placeholder="Recipe Name", name="name" value="#{update.name}")
+				input(type="text", placeholder="Song Title", name="name" value="#{update.songs}")
 				p
-				input(type="text", placeholder="Youtube Link", name="Youtube" value="#{update.Youtube}")
+				input(type="text", placeholder="number", name="Number" value="#{update.number}")
 				p
-				Textarea(placeholder="Ingredients", name="Ingredients" value="#{update.Ingredients}")
+				Textarea(placeholder="Author/Songwriter/Singer", name="a/s/s" value="#{update.a/s/s}")
 				p
-				Textarea(placeholder="Description", name="Description" value="#{update.Description}")
-				p
-				input(type="text", placeholder="Date of update", name="Date1" value="#{update.Date}")
+				Textarea(placeholder="Lyrics", name="Lrics" value="#{update.lyrics}")
+				
 				br
 				br
 				button(type="submit") Submit
